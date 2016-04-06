@@ -95,8 +95,9 @@ print "Input size: " + str(numpyBabelDataSz) + ' Max: ' + str(numpy.max(nimBabel
 # check for slice dim violation...
 #===============================================================================
 if (endSlice > numpyBabelDataSz[sliceDim]):
-    print "Error: end slice [" +str(endSlice)+ "] out of max [" +str(numpyBabelDataSz[sliceDim])+ "] range..."
-    sys.exit()
+    print "Warning: end slice [" +str(endSlice)+ "] out of max [" +str(numpyBabelDataSz[sliceDim])+ "] range..."
+    endSlice = numpyBabelDataSz[sliceDim] - 3
+    #sys.exit()
 #===============================================================================
 # average, if functional input...
 #===============================================================================
